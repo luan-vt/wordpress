@@ -1,0 +1,12 @@
+{
+    "phpVersions": [
+        "7.4",
+        "7.3",
+        "8.0"
+    ],
+    "variants":[
+        "fpm"
+    ],
+    "wordpress": "latest",
+    "nginx": "1.18.0"
+}
