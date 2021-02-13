@@ -280,4 +280,3 @@ RUN chmod o+x /usr/local/bin/docker-entrypoint.sh
 
 WORKDIR "/var/www/html"
 ENTRYPOINT ["docker-entrypoint.sh"]
-USER nginx

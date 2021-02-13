@@ -149,7 +149,6 @@ RUN set -eux; \
 RUN set -ex; \
 	\
 	savedAptMark="$(apt-mark showmanual)"; \
-	\
 	apt-get update; \
 	apt-get install -y --no-install-recommends \
 		libfreetype6-dev \
@@ -277,4 +276,3 @@ RUN chmod o+x /usr/local/bin/docker-entrypoint.sh
 
 WORKDIR "/var/www/html"
 ENTRYPOINT ["docker-entrypoint.sh"]
-USER nginx
