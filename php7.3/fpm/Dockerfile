@@ -219,8 +219,8 @@ RUN { \
 RUN set -eux; \
 	version='latest'; \
 	curl -o wordpress.tar.gz -fL "https://wordpress.org/wordpress-$version.tar.gz"; \
-    sha1="$(wget -qO- "https://wordpress.org/wordpress-$version.tar.gz.sha1")" ; \
-    echo "$sha1 *wordpress.tar.gz" | sha1sum -c -;  
+    sha1="$(curl "https://wordpress.org/wordpress-$version.tar.gz.sha1")" ; \
+    echo "$sha1 *wordpress.tar.gz" | sha1sum -c -;  \
 	\
 # upstream tarballs include ./wordpress/ so this gives us /usr/src/wordpress
 	tar -xzf wordpress.tar.gz -C /usr/src/; \

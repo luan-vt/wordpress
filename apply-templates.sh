@@ -48,5 +48,6 @@ for phpVersion in "${phpVersions[@]}"; do
         } > "$dir/Dockerfile"
 
         cp -a docker-entrypoint.sh "$dir/"
+        cp -a conf "$dir/"
     done
 done
